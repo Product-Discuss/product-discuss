@@ -1,0 +1,100 @@
+#container {
+    position: relative;
+    color: white;
+    background-color: #0a1c3f;
+    margin: auto;
+    width: 724px;
+    height: 431px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+#catchyPhrase {
+    position: relative;
+    float: left;
+    width: 319px;
+    height: 421px;
+}
+
+#login {
+    position: relative;
+    float: right;
+    width: 319px;
+    height: 421px;
+    background: rgba(18, 91, 234, 0.1);
+    border: 0px solid #f2f5fb;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#name {
+    position: relative;
+    margin: 0px 0px 20px 10px;
+    font-family: Quando;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+}
+
+#email {
+    position: relative;
+    margin: 0px 0px 20px 10px;
+    font-family: Quando;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+}
+
+#pwd {
+    position: relative;
+    margin: 0px 0px 20px 10px;
+    font-family: Quando;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+}
+
+input {
+    position: relative;
+    width: 282px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px 0px 20px 10px;
+    background: #fff3f3;
+}
+
+#login-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}
+
+#login-google-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}
+#sign-up-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}

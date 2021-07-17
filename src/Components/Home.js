@@ -1,89 +1,127 @@
 import React from "react";
+import { useState } from "react";
+import "./Home.css";
 
 const Home = () => {
-    return (
-        <div
-            id="container"
-            style={{
-                backgroundColor: "#0A1C3F",
-                margin: "auto",
-                width: "724px",
-                height: "431px",
-                marginTop: "40px",
-                padding: "30px",
-            }}
-        >
-            <span
-                style={{
-                    color: "white",
-                    float: "left",
-                    width: "319px",
-                    height: "421px",
-                }}
-            >
-                <h1>Catchy Phrase</h1>
-            </span>
-            <span
-                style={{
-                    float: "right",
-                    color: "white",
-                    width: "319px",
-                    height: "421px",
-                    background: "rgba(18, 91, 234, 0.1)",
-                    border: "0.2px solid #F2F5FB",
-                    boxSizing: "border-box",
-                    borderRadius: "5px",
-                    padding: "15px",
-                }}
-            >
-                <form>
-                    <label> Email</label>
-                    <br />
-                    <input
-                        type="text"
-                        style={{
-                            width: "282px",
-                            height: "40px",
-                            marginTop: "4px",
-                        }}
-                    />
-                    <br />
-                    <br />
-                    <label>Password</label>
-                    <br />
-                    <input
-                        type="text"
-                        style={{
-                            width: "282px",
-                            height: "40px",
-                            marginTop: "8px",
-                        }}
-                    />
-                </form>
+    const [isLoginState, setLoginState] = useState(1);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-                <button
-                    style={{
-                        // position: "absolute",
-                        width: "150px",
-                        height: "38px",
-                        background:
-                            "linear-gradient(0deg, rgba(235, 218, 218, 0.2), rgba(235, 218, 218, 0.2)), rgba(0, 79, 245, 0.58)",
-                        // background-blend-mode: "normal, color-burn",
-                        // mix-blend-mode: "multiply",
-                        borderRadius: "5px",
-                    }}
-                >
-                    LOG IN
-                </button>
-                <button style={{ margin: "25px 90px 0px 90px" }}>
-                    Sign IN With Google
-                </button>
-                <button style={{ margin: "25px 90px 0px 125px" }}>
-                    Sign UP
-                </button>
-            </span>
-        </div>
-    );
+    const handleLogInClick = () => {
+        clearAllInputs();
+    };
+
+    const clearAllInputs = () => {
+        setName("");
+        setEmail("");
+        setPassword("");
+    };
+
+    if (isLoginState) {
+        return (
+            <div id="container">
+                <span id="catchyPhrase">
+                    <h1>Catchy Phrase</h1>
+                </span>
+                <span id="login">
+                    <form>
+                        <label id="email"> Email</label>
+                        <br />
+                        <input
+                            type="text"
+                            value={email}
+                            onChange={(event) => {
+                                setEmail(event.target.value);
+                            }}
+                            required
+                        />
+                        <br />
+                        <label id="pwd">Password</label>
+                        <br />
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(event) => {
+                                setPassword(event.target.value);
+                            }}
+                            required
+                        />
+                    </form>
+
+                    <button id="login-button" onClick={handleLogInClick}>
+                        Log in
+                    </button>
+                    <button id="login-google-button">Log in with Google</button>
+                    <button
+                        id="sign-up-button"
+                        onClick={() => {
+                            setLoginState(0);
+                            clearAllInputs();
+                        }}
+                    >
+                        Sign up
+                    </button>
+                </span>
+            </div>
+        );
+    } else {
+        return (
+            <div id="container">
+                <span id="catchyPhrase">
+                    <h1>Catchy Phrase</h1>
+                </span>
+                <span id="login">
+                    <form>
+                        <label id="name"> Name</label>
+                        <br />
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(event) => {
+                                setName(event.target.value);
+                            }}
+                            required
+                        />
+                        <br />
+                        <label id="email"> Email</label>
+                        <br />
+                        <input
+                            type="text"
+                            value={email}
+                            onChange={(event) => {
+                                setEmail(event.target.value);
+                            }}
+                            required
+                        />
+                        <br />
+                        <label id="pwd">Password</label>
+                        <br />
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(event) => {
+                                setPassword(event.target.value);
+                            }}
+                            required
+                        />
+                    </form>
+
+                    <button id="login-button">Sign up</button>
+                    <button id="login-google-button">Log in with Google</button>
+                    <button
+                        id="sign-up-button"
+                        onClick={() => {
+                            setLoginState(1);
+                            clearAllInputs();
+                        }}
+                    >
+                        Log in
+                    </button>
+                </span>
+            </div>
+        );
+    }
 };
 
 export default Home;
