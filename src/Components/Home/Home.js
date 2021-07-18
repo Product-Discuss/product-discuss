@@ -8,18 +8,33 @@ const Home = () => {
     const [isLoginState, setLoginState] = useState(1);
 
     return (
-        <div id="container">
-            <span id="catchyPhrase">
-                <h1>Catchy Phrase</h1>
-            </span>
-            <span id="log-in">
-                {isLoginState ? (
-                    <Login setLoginState={setLoginState} />
-                ) : (
-                    <Signin setLoginState={setLoginState} />
-                )}
-            </span>
-        </div>
+      <div className={"container"}>
+        <span className={"catchyPhrase"}>
+          <h1 className={"catchyPhraseH1"}>
+            Discuss <span className={"catchyProduct"}>Product</span>
+          </h1>
+          <h1 className={"catchyPhraseH1"}>
+            Rate <span className={"catchyProduct"}>Product</span>
+          </h1>
+          <h1 className={"catchyPhraseH1"}>
+            Buy <span className={"catchyProduct"}>Product</span>
+          </h1>
+
+          <h3 className={"catchyPhraseH3"}>
+            All your faviourates are at one place now !
+          </h3>
+        </span>
+
+      <hr />
+
+        <span className={"log-in-home"}>
+          {isLoginState ? (
+            <Login setLoginState={setLoginState} />
+          ) : (
+            <Signin setLoginState={setLoginState} />
+          )}
+        </span>
+      </div>
     );
 };
 

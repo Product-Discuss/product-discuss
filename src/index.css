@@ -4,3 +4,7 @@
     box-sizing: border-box;
     background-color: #0a1c3f;
 }
+
+body{
+  padding: 10px 35px
+}
