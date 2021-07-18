@@ -1,22 +1,40 @@
-#container {
+.container {
     position: relative;
     color: white;
     background-color: #0a1c3f;
-    margin: auto;
-    width: 724px;
-    height: 431px;
-    margin-top: 40px;
-    padding: 30px;
+    margin-top: 30px;
+    padding: 0px 35px;
+
+
+    display : flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-#catchyPhrase {
+.catchyPhrase {
     position: relative;
     float: left;
-    width: 319px;
+    width: 40%;
     height: 421px;
+    line-height: 7rem;
+
+    font-family: "Roboto Slab", serif;;
 }
 
-#log-in {
+.catchyPhraseH1{
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.catchyPhraseH3{
+  width: 325px;
+  font-size: 30px;
+  line-height: 2.6rem;
+
+  transform: rotate(-12deg);
+}
+
+.log-in-home {
     float: right;
     width: 319px;
     height: 421px;
@@ -24,4 +42,34 @@
     box-sizing: border-box;
     padding: 10px;
     border-radius: 5px;
+}
+
+span.catchyProduct{
+  color: white;
+  animation: bounceUp 3000ms ease 0ms 1 normal both;
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 0;
+  }
+  30% {
+    transform: translate3d(0px, -50px, 0px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate3d(0px, 20px, 0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 0;
+  }
 }

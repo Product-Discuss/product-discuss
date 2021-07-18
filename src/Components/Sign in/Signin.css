@@ -1,4 +1,17 @@
-#name {
+.signin{
+  background-color: #0B2250;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 25px;
+  width: 350px;
+  height: 500px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.name {
     position: relative;
     margin: 0px 0px 20px 10px;
     font-family: Quando;
@@ -9,7 +22,7 @@
     letter-spacing: 0.06em;
 }
 
-#email {
+.email {
     position: relative;
     margin: 0px 0px 20px 10px;
     font-family: Quando;
@@ -20,7 +33,7 @@
     letter-spacing: 0.06em;
 }
 
-#pwd {
+.pwd {
     position: relative;
     margin: 0px 0px 20px 10px;
     font-family: Quando;
@@ -40,31 +53,54 @@ input {
     background: #fff3f3;
 }
 
-#log-in-button {
-    color: white;
-    position: relative;
-    width: 150px;
-    height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
-    border-radius: 5px;
+.buttons-div{
+  background-color: inherit;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 35%;
 }
 
-#log-in-google-button {
+.sign-up-button{
     color: white;
     position: relative;
     width: 150px;
     height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
-    border-radius: 5px;
+    background-color: #011949;
+    border: 0px;
+    cursor: pointer;
+    font-size: 16px;
 }
-#sign-up-button {
+
+.sign-up-button:hover{
+  border: 1px solid white;
+  font-size: 18px;
+}
+
+.log-in-google-button {
     color: white;
     position: relative;
-    width: 150px;
-    height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #004EF0;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.log-in-button {
+   color: white;
+    position: relative;
+    width: 300px;
+    height: 38px;
+    background-color: #0B2250;
+    border : 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.log-in-button:hover{
+  font-size: 21px;
+}
+

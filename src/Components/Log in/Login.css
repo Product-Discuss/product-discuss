@@ -1,10 +1,23 @@
-#email {
+.log-in{
+  background-color: #0B2250;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 25px;
+  width: 350px;
+  height: 475px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+.email {
     position: relative;
     margin: 0px 0px 20px 10px;
     font-size: 18px;
 }
 
-#pwd {
+.pwd {
     position: relative;
     margin: 0px 0px 20px 10px;
     font-size: 18px;
@@ -19,31 +32,53 @@ input {
     background: #fff3f3;
 }
 
-#login-button {
-    color: white;
-    position: relative;
-    width: 150px;
-    height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
-    border-radius: 5px;
+.buttons-div-login{
+  background-color: inherit;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
 }
 
-#log-in-google-button {
+.login-button {
     color: white;
     position: relative;
     width: 150px;
     height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
-    border-radius: 5px;
+    background-color: #011949;
+    border: 0px;
+    cursor: pointer;
+    font-size: 16px;
 }
-#sign-up-button {
+
+.login-button:hover{
+  border: 1px solid white;
+  font-size: 18px;
+}
+
+.log-in-google-button {
     color: white;
     position: relative;
-    width: 150px;
-    height: 38px;
-    margin: 10px 0px 15px 70px;
-    background-color: slateblue;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #004EF0;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-up-button-login {
+    color: white;
+    position: relative;
+    width: 300px;
+    height: 38px;
+    background-color: #0B2250;
+    border : 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sign-up-button-login:hover{
+  font-size: 21px;
 }

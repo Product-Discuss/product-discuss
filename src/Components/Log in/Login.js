@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
+
 const Login = (props) => {
     const setLoginState = props.setLoginState;
     const [email, setEmail] = useState("");
@@ -14,45 +15,47 @@ const Login = (props) => {
     };
 
     return (
-        <span>
-            <form>
-                <label id="email"> Email</label>
-                <br />
-                <input
-                    type="text"
-                    value={email}
-                    onChange={(event) => {
-                        setEmail(event.target.value);
-                    }}
-                    required
-                />
-                <br />
-                <label id="pwd">Password</label>
-                <br />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(event) => {
-                        setPassword(event.target.value);
-                    }}
-                    required
-                />
-            </form>
+      <div className={"log-in"}>
+        <form>
+          <label className={"email"}> Email</label>
+          <br />
+          <input
+            type="text"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+            required
+          />
+          <br />
+          <label className={"pwd"}>Password</label>
+          <br />
+          <input
+            type="password"
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+            required
+          />
+        </form>
 
-            <button id="login-button" onClick={handleLogInClick}>
-                Log in
-            </button>
-            <button id="log-in-google-button">Log in with Google</button>
-            <button
-                id="sign-up-button"
-                onClick={() => {
-                    setLoginState(0);
-                    clearAllInputs();
-                }}
-            >
-                Sign up
-            </button>
-        </span>
+        <div className={"buttons-div-login"}>
+          <button className={"login-button"} onClick={handleLogInClick}>
+            Log in
+          </button>
+          <button className={"log-in-google-button"}>Log in with Google</button>
+          <button
+            className="sign-up-button-login"
+            onClick={() => {
+              setLoginState(0);
+              clearAllInputs();
+            }}
+          >
+            Click here to Sign Up!
+          </button>
+        </div>
+      </div>
     );
 };
 
