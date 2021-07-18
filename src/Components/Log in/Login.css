@@ -1,0 +1,49 @@
+#email {
+    position: relative;
+    margin: 0px 0px 20px 10px;
+    font-size: 18px;
+}
+
+#pwd {
+    position: relative;
+    margin: 0px 0px 20px 10px;
+    font-size: 18px;
+}
+
+input {
+    position: relative;
+    width: 282px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px 0px 20px 10px;
+    background: #fff3f3;
+}
+
+#login-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}
+
+#log-in-google-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}
+#sign-up-button {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 38px;
+    margin: 10px 0px 15px 70px;
+    background-color: slateblue;
+    border-radius: 5px;
+}

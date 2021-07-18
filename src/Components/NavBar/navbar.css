@@ -1,44 +1,45 @@
-.navbar{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  font-family: 'Roboto Slab', serif;
-  background-color: #385792;
-  color: white;
-  height: 60px;
-  border-collapse: collapse;
-  
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    font-family: "Roboto Slab", serif;
+    /* background-color: #0a1c3f; */
+    color: white;
+    height: 60px;
+    border-collapse: collapse;
 }
 
-.title{
-  width: 40%;
-  margin-right: 10%;
-  letter-spacing: 4px;
+.title {
+    width: 40%;
+    margin-right: 10%;
+    letter-spacing: 4px;
 }
 
-.options{
-  display: flex;
-  flex-direction: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 40%;
-  font-weight: 200;
-  color: white;
-  
+.options {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    font-weight: 200;
+    color: white;
 }
 
- a, a:hover, a:focus, a:active {
-     text-decoration: none;
-     color: inherit;
- }
-
-li{
-  list-style: none;
-  cursor: pointer;
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
-li:hover{
-  font-weight: 400;
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+li:hover {
+    font-weight: 400;
 }
