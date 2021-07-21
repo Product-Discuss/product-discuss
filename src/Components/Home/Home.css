@@ -5,8 +5,7 @@
     margin-top: 30px;
     padding: 0px 35px;
 
-
-    display : flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
@@ -18,20 +17,20 @@
     height: 421px;
     line-height: 7rem;
 
-    font-family: "Roboto Slab", serif;;
+    font-family: "Roboto Slab", serif;
 }
 
-.catchyPhraseH1{
-  font-size: 60px;
-  font-weight: 400;
+.catchyPhraseH1 {
+    font-size: 60px;
+    font-weight: 400;
 }
 
-.catchyPhraseH3{
-  width: 325px;
-  font-size: 30px;
-  line-height: 2.6rem;
+.catchyPhraseH3 {
+    width: 325px;
+    font-size: 30px;
+    line-height: 2.6rem;
 
-  transform: rotate(-12deg);
+    transform: rotate(-12deg);
 }
 
 .log-in-home {
@@ -44,32 +43,32 @@
     border-radius: 5px;
 }
 
-span.catchyProduct{
-  color: white;
-  animation: bounceUp 3000ms ease 0ms 1 normal both;
+span.catchyProduct {
+    color: white;
+    animation: bounceUp 3000ms ease 0ms 1 normal both;
 }
 
 @keyframes bounceUp {
-  0% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 0;
-  }
-  30% {
-    transform: translate3d(0px, -50px, 0px);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translate3d(0px, 20px, 0px);
-    opacity: 1;
-  }
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 0;
+    }
+    30% {
+        transform: translate3d(0px, -50px, 0px);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate3d(0px, 20px, 0px);
+        opacity: 1;
+    }
 
-  70% {
-    transform: translate3d(0px, 20px, 0px);
-    opacity: 0.7;
-  }
+    70% {
+        transform: translate3d(0px, 20px, 0px);
+        opacity: 0.7;
+    }
 
-  100% {
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 0;
-  }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 0;
+    }
 }
