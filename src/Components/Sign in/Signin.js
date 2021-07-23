@@ -12,7 +12,6 @@ const Signin = (props) => {
         setEmail("");
         setPassword("");
     };
-
     
     return (
       <div className={"signin"}>
@@ -54,7 +53,6 @@ const Signin = (props) => {
         <div className={"buttons-div"}>
           <button className={"sign-up-button"}>Sign up</button>
           <button className={"log-in-google-button"}
-            onClick = {()=> handleGoogleSignIn()}
           >Sign in with Google</button>
           <button
             className={"log-in-button"}
