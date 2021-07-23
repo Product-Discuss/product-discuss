@@ -5,16 +5,15 @@
     align-items: center;
     width: 95vw;
     font-family: "Roboto Slab", serif;
-    
+
     color: white;
     height: 60px;
-    background-color: #0B2250;
-    border : 0.2px solid white;
-    
+    background-color: #0b2250;
+    border: 0.2px solid white;
 }
 
-.option{
-  background-color: inherit;
+.option {
+    background-color: inherit;
 }
 
 .title {
@@ -52,4 +51,41 @@ li {
 
 li:hover {
     font-weight: 400;
+}
+
+.dropbtn {
+    background-color: #0b2250;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

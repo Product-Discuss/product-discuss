@@ -1,14 +1,14 @@
-.signin{
-  background-color: #0B2250;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 25px;
-  width: 350px;
-  height: 500px;
+.signin {
+    background-color: #0b2250;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 25px;
+    width: 350px;
+    height: 500px;
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
 .name {
@@ -53,16 +53,16 @@ input {
     background: #fff3f3;
 }
 
-.buttons-div{
-  background-color: inherit;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 35%;
+.buttons-div {
+    background-color: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 35%;
 }
 
-.sign-up-button{
+.sign-up-button {
     color: white;
     position: relative;
     width: 150px;
@@ -73,9 +73,9 @@ input {
     font-size: 16px;
 }
 
-.sign-up-button:hover{
-  border: 1px solid white;
-  font-size: 18px;
+.sign-up-button:hover {
+    border: 1px solid white;
+    font-size: 18px;
 }
 
 .log-in-google-button {
@@ -84,23 +84,22 @@ input {
     width: 300px;
     height: 40px;
     font-size: 16px;
-    background-color: #004EF0;
+    background-color: #004ef0;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .log-in-button {
-   color: white;
+    color: white;
     position: relative;
     width: 300px;
     height: 38px;
-    background-color: #0B2250;
-    border : 0px;
+    background-color: #0b2250;
+    border: 0px;
     font-size: 20px;
     cursor: pointer;
 }
 
-.log-in-button:hover{
-  font-size: 21px;
+.log-in-button:hover {
+    font-size: 21px;
 }
-

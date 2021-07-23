@@ -1,28 +1,43 @@
-import React from 'react'
-import './navbar.css'
-import { Link } from "react-router-dom";
-
+import "./navbar.css";
+import { Link, Redirect } from "react-router-dom";
+import { Icon } from "@fortawesome/free-solid-svg-icons";
+import Home from "../Home/Home";
 
 const NavBar = () => {
-  return (
-    <div className="navbar">
-      <h1 className="title">PRODUCT DISCUSS</h1>
-      <ul className="options">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contributors">Contributors</Link>
-        </li>
-        <li>
-          <Link to="/api">API</Link>
-        </li>
-      </ul>
-    </div>
-  );
-}
+    const handleLogOut = () => {
+        localStorage.removeItem("user");
+        <Redirect to="/" />;
+    };
 
-export default NavBar
+    return (
+        <div className="navbar">
+            <h1 className="title">PRODUCT DISCUSS</h1>
+            <ul className="options">
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/about">About</Link>
+                </li>
+                <li>
+                    <Link to="/contributors">Contributors</Link>
+                </li>
+                <li>
+                    <Link to="/api">API</Link>
+                </li>
+                <li>
+                    <div className="dropdown">
+                        <button className="dropbtn">Profile</button>
+                        <div className="dropdown-content">
+                            <Link to="/	" onClick={handleLogOut}>
+                                Log Out
+                            </Link>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    );
+};
+
+export default NavBar;
