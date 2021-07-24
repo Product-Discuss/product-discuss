@@ -26,7 +26,6 @@ const Signin = (props) => {
     const handleGoogleLogin = async () => {
         try {
             let result = await auth.signInWithPopup(provider);
-            //objects
             let { credential, token, user } = result;
             localStorage.setItem("user", JSON.stringify(user));
             userContext.setUser(user);
