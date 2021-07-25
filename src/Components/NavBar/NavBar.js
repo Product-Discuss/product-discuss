@@ -2,6 +2,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../App";
+import { auth } from "../../firebase";
 import { Icon } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
@@ -32,7 +33,17 @@ const NavBar = () => {
                                         to="/"
                                         onClick={() => {
                                             localStorage.removeItem("user");
-                                            userContext.setUser("");
+                                            userContext.setUser(null);
+
+                                            (async () =>{
+                                              try{
+                                                await auth.signOut();
+                                                console.log('success !!');
+                                              }
+                                              catch(err){
+                                                console.log(err);
+                                              }
+                                            })();
                                         }}
                                     >
                                         Log Out

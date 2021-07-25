@@ -7,15 +7,25 @@ const Login = (props) => {
     const setLoginState = props.setLoginState;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const handleLogInClick = () => {
-        clearAllInputs();
-    };
+    
     const userContext = useContext(UserContext);
 
     const clearAllInputs = () => {
         setEmail("");
         setPassword("");
     };
+
+    const handleLogInClick = async () => {
+      try{
+        let userCredential = await auth.signInWithEmailAndPassword(email,password)
+        let user = userCredential.user;
+        localStorage.setItem("user", JSON.stringify(user));
+        userContext.setUser(user);
+      }
+      catch(err){
+        alert(err.message)
+      }
+    }
 
     const handleGoogleLogin = async () => {
         try {
