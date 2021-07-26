@@ -3,11 +3,16 @@ import { auth, provider } from "../../firebase";
 import "./Login.css";
 import { UserContext } from "../../App";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
+
 const Login = (props) => {
     const setLoginState = props.setLoginState;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    
+    const [isPasswordShow, setisPasswordShow] = useState(false);
+
     const userContext = useContext(UserContext);
 
     const clearAllInputs = () => {
@@ -16,16 +21,18 @@ const Login = (props) => {
     };
 
     const handleLogInClick = async () => {
-      try{
-        let userCredential = await auth.signInWithEmailAndPassword(email,password)
-        let user = userCredential.user;
-        localStorage.setItem("user", JSON.stringify(user));
-        userContext.setUser(user);
-      }
-      catch(err){
-        alert(err.message)
-      }
-    }
+        try {
+            let userCredential = await auth.signInWithEmailAndPassword(
+                email,
+                password
+            );
+            let user = userCredential.user;
+            localStorage.setItem("user", JSON.stringify(user));
+            userContext.setUser(user);
+        } catch (err) {
+            alert(err.message);
+        }
+    };
 
     const handleGoogleLogin = async () => {
         try {
@@ -38,6 +45,12 @@ const Login = (props) => {
             console.log(errorCode);
         }
     };
+
+    const togglePasswordVisiblity = () => {
+        setisPasswordShow(isPasswordShow ? false : true);
+    };
+
+    const handleClickForgotPassword = () => {};
 
     return (
         <div className={"log-in"}>
@@ -56,13 +69,18 @@ const Login = (props) => {
                 <label className={"pwd"}>Password</label>
                 <br />
                 <input
-                    type="password"
+                    id="pass-field"
+                    type={isPasswordShow ? "text" : "password"}
                     value={password}
                     onChange={(event) => {
                         setPassword(event.target.value);
                     }}
                     required
                 />
+                <i onClick={togglePasswordVisiblity}>{eye}</i>
+                <button onClick={handleClickForgotPassword}>
+                    forgot Password?
+                </button>
             </form>
 
             <div className={"buttons-div-login"}>

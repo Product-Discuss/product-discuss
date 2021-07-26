@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../App";
 import { auth } from "../../firebase";
-import { Icon } from "@fortawesome/free-solid-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+const profileIcon = <FontAwesomeIcon icon={faUser} />;
 
 const NavBar = () => {
     const userContext = useContext(UserContext);
@@ -27,7 +30,7 @@ const NavBar = () => {
                     <div>
                         {userContext.user ? (
                             <div className="dropdown">
-                                <button className="dropbtn">Profile</button>
+                                <i>{profileIcon}</i>
                                 <div className="dropdown-content">
                                     <Link
                                         to="/"
@@ -35,14 +38,13 @@ const NavBar = () => {
                                             localStorage.removeItem("user");
                                             userContext.setUser(null);
 
-                                            (async () =>{
-                                              try{
-                                                await auth.signOut();
-                                                console.log('success !!');
-                                              }
-                                              catch(err){
-                                                console.log(err);
-                                              }
+                                            (async () => {
+                                                try {
+                                                    await auth.signOut();
+                                                    console.log("success !!");
+                                                } catch (err) {
+                                                    console.log(err);
+                                                }
                                             })();
                                         }}
                                     >
