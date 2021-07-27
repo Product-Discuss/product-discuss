@@ -5,7 +5,7 @@ import { UserContext } from "../../App";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-const eye = <FontAwesomeIcon icon={faEye} />;
+const eye = <FontAwesomeIcon className={"eyeBtn-signin"}  icon={faEye} />;
 
 const Signin = (props) => {
     const setLoginState = props.setLoginState;

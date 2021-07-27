@@ -5,7 +5,7 @@ import { UserContext } from "../../App";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-const eye = <FontAwesomeIcon icon={faEye} />;
+const eye = <FontAwesomeIcon className={"eyeBtn-login"} icon={faEye} />;
 
 const Login = (props) => {
     const setLoginState = props.setLoginState;
@@ -78,7 +78,7 @@ const Login = (props) => {
                     required
                 />
                 <i onClick={togglePasswordVisiblity}>{eye}</i>
-                <button onClick={handleClickForgotPassword}>
+                <button className = {'forgot-pwd-Btn'}onClick={handleClickForgotPassword}>
                     forgot Password?
                 </button>
             </form>

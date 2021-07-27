@@ -82,3 +82,20 @@ input {
 .sign-up-button-login:hover{
   font-size: 21px;
 }
+
+.eyeBtn-login{
+  position: relative;
+  top: -50px;
+  left: 250px;
+  font-size: 1.3rem;
+}
+
+.forgot-pwd-Btn{
+  color: white;
+  font-size: 20px;
+  border: 0;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  cursor: pointer;
+}
